@@ -1,0 +1,32 @@
+{
+  "name": "devnetwork",
+  "version": "1.0.0",
+  "description": "social network for developers",
+  "main": "app.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node app.js",
+    "server": "nodemon app.js --ignore client",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "baracockula",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.3.15",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}
