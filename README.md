@@ -15,6 +15,7 @@ Database is set up on mlab cloud service that hosts mongoDB database.
 QUICK START:
 
 - Install dependencies for server
+
 npm install
 
 - Install dependencies for client
